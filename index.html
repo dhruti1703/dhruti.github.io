@@ -1,193 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhruti Sundar Pradhan | SAP Integration Consultant</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhruti Sundar Pradhan | SAP Integration Consultant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #6a11cb;
+      --secondary: #2575fc;
+      --bg: #fdfcff;
+      --text-dark: #2d2e32;
+      --card-bg: #ffffff;
+      --card-shadow: rgba(0, 0, 0, 0.1);
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        header {
-            background-color: #3f51b5;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+      display: flex;
+    }
 
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
-            animation: zoomIn 1s ease-out;
-        }
+    nav {
+      width: 250px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding-top: 60px;
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        section {
-            padding: 30px 20px;
-            max-width: 900px;
-            margin: auto;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
+    nav h1 {
+      font-size: 1.5em;
+      margin-bottom: 40px;
+      text-align: center;
+    }
 
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 15px 0;
+      padding: 10px 20px;
+      transition: 0.3s;
+      width: 100%;
+      text-align: center;
+    }
 
-        h1, h2 {
-            color: #3f51b5;
-        }
+    nav a:hover,
+    nav a.active {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+    }
 
-        .contact {
-            margin-top: 20px;
-        }
+    main {
+      margin-left: 250px;
+      padding: 40px;
+      width: calc(100% - 250px);
+    }
 
-        .contact a {
-            display: block;
-            color: #3f51b5;
-            text-decoration: none;
-            margin-bottom: 8px;
-            transition: transform 0.2s ease, color 0.2s ease;
-        }
+    section {
+      margin-bottom: 40px;
+      padding: 30px;
+      background: var(--card-bg);
+      border-radius: 20px;
+      box-shadow: 0 10px 25px var(--card-shadow);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
 
-        .contact a:hover {
-            transform: scale(1.05);
-            color: #1a237e;
-        }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-        footer {
-            background-color: #e0e0e0;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #555;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 1.2s forwards;
-        }
+    h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
 
-        /* Keyframes for animations */
-        @keyframes zoomIn {
-            from {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
+    ul li {
+      margin-bottom: 12px;
+    }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    .contact a {
+      display: block;
+      color: var(--secondary);
+      font-weight: 500;
+      margin-bottom: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .contact a:hover {
+      color: var(--primary);
+      transform: translateX(5px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Dhruti Sundar Pradhan</h1>
-        <p><strong>SAP Integration Consultant | SAP CPI | SuccessFactors | S/4HANA | Third-party Integration</strong></p>
-    </header>
+  <nav>
+    <h1>Dhruti Pradhan</h1>
+    <a href="#about" class="active">About Me</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section>
-        <h2>About Me</h2>
-        <p>
-            I am a certified SAP Integration Consultant with 4+ years of experience in delivering scalable, secure, and performance-oriented solutions 
-            using SAP Cloud Platform Integration (CPI). My core expertise lies in integrating SAP SuccessFactors, S/4HANA, and various third-party 
-            systems (SAP and non-SAP) with APIs, SFTP, and real-time communication. I have delivered high-impact integration projects for 
-            global clients including British American Tobacco (BAT), RAI, ITC Infotech, TCS, Capgemini, and Volvo.
-        </p>
+  <main>
+    <section id="about">
+      <h2>💡 About Me</h2>
+      <p>
+        I’m a certified SAP Integration Consultant with 5+ years of experience in scalable solutions via SAP CPI. Expert in integrating SAP SuccessFactors, S/4HANA & third-party systems with secure real-time APIs.
+      </p>
     </section>
 
-    <section>
-        <h2>Expertise</h2>
-        <ul>
-            <li>End-to-End SAP CPI Development (iFlows, Groovy Scripts, OData, SOAP, REST, SFTP)</li>
-            <li>SuccessFactors Integration (Employee Central, OData, CompoundEmployee, Integration Center)</li>
-            <li>S/4HANA Integration (On-Premise and Cloud)</li>
-            <li>API Management in SAP BTP</li>
-            <li>Boomi to CPI migration & Cloud Integration Best Practices</li>
-        </ul>
+    <section id="expertise">
+      <h2>🛠 Expertise</h2>
+      <ul>
+        <li>✔ SAP CPI (iFlows, Groovy, OData, REST, SOAP, SFTP)</li>
+        <li>✔ SuccessFactors Integration (EC, OData, CompoundEmployee)</li>
+        <li>✔ SAP S/4HANA (Cloud & On-Premise)</li>
+        <li>✔ SAP BTP API Management</li>
+        <li>✔ Boomi to CPI Migration</li>
+      </ul>
     </section>
 
-    <section>
-        <h2>Major Clients & Projects</h2>
-        <ul>
-            <li>
-                <strong>British American Tobacco (BAT) via ITC Infotech:</strong><br>
-                Led the migration of legacy Boomi-based integrations to SAP CPI, primarily focused on SuccessFactors Employee Central integration. 
-                Designed and implemented secure data flows using SFTP and PGP encryption for employee master data. 
-                Built custom iFlows involving Groovy scripting, dynamic routing, and error handling. 
-                Ensured data consistency and security during payroll data transfers and master data synchronization between SuccessFactors and SAP S/4HANA.
-            </li><br>
-            <li>
-                <strong>Volvo via Capgemini:</strong><br>
-                Designed and implemented SAP CPI integrations for HR processes between SAP SuccessFactors and On-Premise SAP S/4HANA. 
-                Handled value mappings, lookup tables, local process integrations, and complex transformations using Groovy scripts. 
-                Developed real-time OData and SOAP-based integrations for onboarding, employee updates, and org data replication.
-            </li><br>
-            <li>
-                <strong>RAI (Reynolds American inc.):</strong><br>
-                Built multi-tenant CPI interfaces to manage retail workforce integration between SuccessFactors and third-party payroll providers. 
-                Developed modular integration flows for multiple vendors with token-based authentication and error alerts.
-            </li><br>
-            <li>
-                <strong>ITC Infotech Internal Project:</strong><br>
-                Created a pre-configured CPI integration template to connect SAP SuccessFactors with 3rd party vendor and SAP ECC systems. 
-                Delivered a plug-and-play architecture for small retail clients using message mapping and secure token-based APIs.
-            </li><br>
-            <li>
-                <strong>TCS:</strong><br>
-                Collaborated on SuccessFactors and SAP HCM hybrid model where CPI was used to bridge cloud and on-premise systems. 
-                Developed monitoring dashboards and proactive error-handling alerts using SAP Cloud Integration content modifier and mail adapters.
-            </li>
-        </ul>
+    <section id="projects">
+      <h2>📂 Major Clients & Projects</h2>
+      <ul>
+        <li><strong>BAT (via ITC Infotech):</strong> Migrated Boomi to CPI, built secured SFTP iFlows, encrypted payroll syncs, Groovy routing.</li>
+        <li><strong>Volvo (via Capgemini):</strong> SAP CPI HR integrations, real-time onboarding sync, org replication with Groovy logic.</li>
+        <li><strong>RAI:</strong> Multi-vendor CPI architecture with token-auth and error notification flows.</li>
+        <li><strong>ITC Infotech:</strong> Built pre-configured CPI templates for EC + ECC scenarios.</li>
+        <li><strong>TCS:</strong> Managed hybrid HCM integrations with alert monitoring via CPI mail adapters.</li>
+      </ul>
     </section>
 
-    <section class="contact">
-        <h2>Contact Me</h2>
-        <a href="mailto:sap.dsp98@gmail.com">📧 sap.dsp98@gmail.com</a>
-        <a href="https://www.linkedin.com/in/dhruti-sundar-pradhan" target="_blank">🔗 LinkedIn Profile</a>
-        <a href="https://wa.me/917978402068" target="_blank">💬 WhatsApp: +91-7978402068</a>
-        <p><em>Available for freelance/part-time integration projects — including weekend support delivery.</em></p>
+    <section id="contact" class="contact">
+      <h2>📬 Contact Me</h2>
+      <a href="mailto:sap.dsp98@gmail.com">📧 sap.dsp98@gmail.com</a>
+      <a href="https://www.linkedin.com/in/dhruti-sundar-pradhan" target="_blank">🔗 LinkedIn</a>
+      <a href="https://wa.me/917978402068" target="_blank">💬 WhatsApp: +91-7978402068</a>
+      <p><em>Open for freelance or part-time SAP integration roles (weekends too!)</em></p>
     </section>
 
     <footer>
-        &copy; 2025 Dhruti Sundar Pradhan. All rights reserved.
+      &copy; 2025 Dhruti Sundar Pradhan. All rights reserved.
     </footer>
+  </main>
 
-    <script>
-        // Fade in sections on scroll
-        const sections = document.querySelectorAll("section");
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
+  <script>
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.1 });
 
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
+    sections.forEach(section => observer.observe(section));
+
+    const links = document.querySelectorAll('nav a');
+    links.forEach(link => {
+      link.addEventListener('click', function () {
+        links.forEach(el => el.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
